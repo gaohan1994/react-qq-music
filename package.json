@@ -14,6 +14,9 @@
     "pre-commit": "git -c core.whitespace=-space-before-tab,-trailing-space --no-pager diff --cached --check && lint-staged",
     "pre-push": "git-branch-is -r \"^(feature|bugfix)-([0-9a-z.-]+)$|^main$\""
   },
+  "lint-staged": {
+    "./src/**/*.{md,ts,tsx,js,jsx,css,less,scss,html,json,yaml}": "prettier --write"
+  },
   "dependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
