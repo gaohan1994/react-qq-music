@@ -4,6 +4,7 @@ import * as path from 'path';
 import { defineConfig } from 'vite';
 import { watcher } from 'vite-plugin-filewatcher';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import { default as tsconfigPaths } from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
@@ -12,6 +13,7 @@ export default defineConfig(() => {
   return {
     plugins: [
       react(),
+      tsconfigPaths(),
       createSvgIconsPlugin({
         iconDirs: [iconsDir],
         symbolId: 'icon-[name]',

@@ -1,11 +1,24 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "compilerOptions": {
+    "outDir": "./build",
+    "module": "esnext",
+    "target": "esnext",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "incremental": true,
+    "types": ["node", "vite-plugin-svg-icons/client"],
+    "lib": ["es2015", "es2017", "dom", "dom.iterable", "esnext"]
+  },
+  "include": ["./src"]
 }
