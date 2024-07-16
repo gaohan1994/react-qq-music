@@ -17,6 +17,8 @@
     "jsx": "react-jsx",
     "resolveJsonModule": true,
     "incremental": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
     "types": ["node", "vite-plugin-svg-icons/client"],
     "lib": ["es2015", "es2017", "dom", "dom.iterable", "esnext"]
   },
