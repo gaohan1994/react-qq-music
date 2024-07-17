@@ -1,3 +1,4 @@
+import { pageLogger } from 'constants/logger';
 import { homeRoute } from 'constants/routes';
 import { useAtomAction } from 'infra/jotai/useAtomAction';
 import { useSelectAtom } from 'infra/jotai/useSelectAtom';
@@ -29,6 +30,7 @@ export const Debug = () => {
   const setCounterValueHandler = useCallback(() => {
     const value = Number(inputRef.current?.value);
     if (isNaN(value)) {
+      pageLogger.error('Invaild value');
       return;
     }
     setCounterValue(value);
