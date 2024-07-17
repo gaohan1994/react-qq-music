@@ -1,5 +1,5 @@
+import { createStorageAtom } from 'infra/jotai/createStorageAtom';
 import { atom } from 'jotai';
-import { createStorageAtom } from 'jotai/createStorageAtom';
 
 interface DevelopmentStateValue {
   counter: number;

@@ -1,4 +1,4 @@
-import { createAtomAction } from 'jotai/createAtomAction';
+import { createAtomAction } from 'infra/jotai/createAtomAction';
 import { developmentLocalState, developmentState } from './development.state';
 
 export const increaseCounterAction = createAtomAction((get, set) => {

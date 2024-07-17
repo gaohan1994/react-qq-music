@@ -1,7 +1,7 @@
 import { homeRoute } from 'constants/routes';
+import { useAtomAction } from 'infra/jotai/useAtomAction';
+import { useSelectAtom } from 'infra/jotai/useSelectAtom';
 import { useAtomValue } from 'jotai';
-import { useAtomAction } from 'jotai/useAtomAction';
-import { useSelectAtom } from 'jotai/useSelectAtom';
 import { useCallback, useRef } from 'react';
 import {
   decreaseCounterAction,
