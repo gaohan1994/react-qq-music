@@ -1,3 +1,14 @@
+@import './theme.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  min-height: 100%;
+  font-family: ProximaNova, sans-serif;
+  /* 这个会导致在iframe嵌入的场景下，单指拖动google地图区域，页面本身无法滚动，用户体验不好 */
+  /* touch-action: none; */
+  transition: all 250ms ease;
+  overflow: hidden;
+}

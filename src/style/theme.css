@@ -1,0 +1,98 @@
+:root {
+  --primary-theme-color: #29cd57;
+  --primary-white-color: #fff;
+  --secondary-theme-color: #fef0e8;
+  --secondary-line-color: #e9ecef;
+  --primary-text-color: #333;
+  --secondary-text-color: #888c96;
+  --disabled-text-color: #c8cbd2;
+  --status-color-yellow: #faad14;
+  --status-color-orange: #f96b18;
+  --status-color-red: #d0021b;
+  --status-color-green: #29cd57;
+  --status-color-blue: #0091ff;
+}
+
+@layer base {
+  .text-content {
+    color: var(--primary-text-color);
+  }
+
+  .text-secondary-content {
+    color: var(--secondary-text-color);
+  }
+
+  .text-link {
+    @apply text-primary underline cursor-pointer;
+  }
+
+  h1,
+  .text-large-title {
+    font-size: 34px;
+    line-height: 41px;
+    font-weight: 700;
+  }
+
+  h2,
+  .text-title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  h3,
+  .text-headline {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  h4,
+  .text-body-1 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+
+  .text-subhead {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+  }
+
+  .text-caption {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+
+  .border-secondary-line {
+    border-width: 1px;
+  }
+
+  .text-mobile-title {
+    font-family: 'ProximaNova';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.24px;
+  }
+
+  .text-title {
+    font-family: 'ProximaNova';
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: -0.34px;
+  }
+
+  .text-mobile-body {
+    font-family: 'ProximaNova';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}
