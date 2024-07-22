@@ -10,6 +10,7 @@ import { default as tsconfigPaths } from 'vite-tsconfig-paths';
 export default defineConfig(() => {
   const root = process.cwd();
   const iconsDir = path.resolve(root, 'src/assets/icons');
+  const imagesDir = path.resolve(root, 'src/assets/images');
   return {
     plugins: [
       react(),
@@ -23,8 +24,23 @@ export default defineConfig(() => {
         onChange: () => {
           const files = fs.readdirSync(iconsDir);
           const fileNameList = files.filter((item) => item.endsWith('.svg')).map((i) => i.split('.')[0]);
-          const content = `// This file is generated automatically. Do not edit it manually. \n\nexport enum IconType{\n  ${fileNameList.map((i) => `${camelCased(i)} = '${i}'`).join(',\n ')}\n}\n`;
+          const content = `// This file is generated automatically. Do not edit it manually. \n\nexport enum IconType {\n  ${fileNameList.map((i) => `${camelCased(i)} = '${i}'`).join(',\n ')}\n}\n`;
           fs.writeFile(path.resolve(iconsDir, 'types.ts'), content, () => {});
+        },
+      }),
+      watcher({
+        path: imagesDir,
+        onChange: () => {
+          const files = fs.readdirSync(imagesDir);
+          const images = files.filter((item) => !item.startsWith('.') && !item.endsWith('.ts'));
+          const content =
+            '// This file is generated automatically. Do not edit it manually. \n\n' +
+            images
+              .map(
+                (image) => `declare module 'assets/images/${image}' {\n\tconst src: string;\n\texport default src;\n}`,
+              )
+              .join('\n\n');
+          fs.writeFile(path.resolve(imagesDir, 'types.d.ts'), content, () => {});
         },
       }),
     ],
