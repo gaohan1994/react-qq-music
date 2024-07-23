@@ -12,3 +12,7 @@ body {
   transition: all 250ms ease;
   overflow: hidden;
 }
+
+.ant-menu-item {
+  padding-inline: 12px !important;
+}

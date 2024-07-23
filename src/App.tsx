@@ -22,7 +22,7 @@ const App = () => {
             itemHeight: 36,
             fontSize: 12,
             iconSize: 18,
-            itemPaddingInline: 12,
+            iconMarginInlineEnd: 6,
             itemBorderRadius: 4,
             itemColor: '#626262',
             itemSelectedColor: '#000000',

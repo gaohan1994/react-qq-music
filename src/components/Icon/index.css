@@ -1,0 +1,21 @@
+.react-qq-music-icon {
+  span {
+    width: 100%;
+    height: 100%;
+  }
+  svg {
+    color: #717171;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.react-qq-music-icon-active {
+  svg {
+    color: #30c27c;
+  }
+}
+
+.react-qq-music-icon-cursor {
+  cursor: pointer;
+}

@@ -32,6 +32,7 @@
     "postcss": "^8.4.39",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.4",
     "vite-plugin-filewatcher": "^0.1.11",
     "vite-plugin-svg-icons": "^2.0.1",

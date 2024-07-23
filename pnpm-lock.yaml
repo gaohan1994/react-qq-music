@@ -47,6 +47,9 @@ dependencies:
   react-dom:
     specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
+  tailwind-merge:
+    specifier: ^2.4.0
+    version: 2.4.0
   tailwindcss:
     specifier: ^3.4.4
     version: 3.4.4
@@ -4835,6 +4838,10 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.1
       stable: 0.1.8
+    dev: false
+
+  /tailwind-merge@2.4.0:
+    resolution: {integrity: sha512-49AwoOQNKdqKPd9CViyH5wJoSKsCDjUlzL8DxuGp3P1FsGY36NJDAa18jLZcaHAUUuTj+JB8IAo8zWgBNvBF7A==}
     dev: false
 
   /tailwindcss@3.4.4:
