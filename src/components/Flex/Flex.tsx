@@ -34,6 +34,5 @@ export const Flex: FC<FlexProps> = ({ col, start, end, around, between, classNam
     },
     className,
   );
-  console.log('cls', cls);
   return <Div {...rest} className={twMerge(cls)} />;
 };
