@@ -1,5 +1,6 @@
 import { Menu as AntdMenu } from 'antd';
 import qqMusicLogo from 'assets/images/qq-music-logo.png';
+import { Controller } from 'components/Controller/Controller';
 import { Div } from 'components/Div/Div';
 import { Flex } from 'components/Flex/Flex';
 import { MENU_CONFIG } from 'constants/menu';
@@ -38,7 +39,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => (
       </Flex>
     </Flex>
     <Div w-screen h-20 className="border-t-[1px]">
-      Footer
+      <Controller />
     </Div>
   </Flex>
 );
