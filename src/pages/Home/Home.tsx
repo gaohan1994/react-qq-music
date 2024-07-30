@@ -1,6 +1,5 @@
-import { Layout } from 'components/Layout/Layout';
+import { musicRoute } from 'constants/routes';
 import { FC } from 'react';
+import { Redirect } from 'wouter';
 
-export const Home: FC<any> = () => {
-  return <Layout>home</Layout>;
-};
+export const Home: FC<any> = () => <Redirect to={musicRoute.path} replace />;

@@ -16,7 +16,7 @@ type ExtractParamName<T extends ReadonlyArray<Part>> = {
 type ParamNameArray<P extends ReadonlyArray<Part>> = ExtractParamName<P>[];
 
 export class Router<RouterParts extends ReadonlyArray<Part>, RouterQuery extends ReadonlyArray<string>> {
-  static BasePath: string = '';
+  static BasePath: string = '/';
 
   static create(...params: ConstructorParameters<typeof Router>) {
     return new Router(...params);

@@ -16,3 +16,7 @@ body {
 .ant-menu-item {
   padding-inline: 12px !important;
 }
+
+.ant-menu-horizontal.ant-menu::before {
+  display: none !important;
+}
