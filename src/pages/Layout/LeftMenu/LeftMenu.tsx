@@ -1,7 +1,5 @@
-import { ConfigProvider, Menu } from 'antd';
-
 import { PlayCircleOutlined } from '@ant-design/icons';
-import { MenuProps } from 'antd';
+import { ConfigProvider, Menu, MenuProps } from 'antd';
 
 type MenuItem = Required<MenuProps>['items'][number];
 

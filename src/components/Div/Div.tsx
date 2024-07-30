@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, ReactNode } from 'react';
+import { forwardRef, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -8,7 +8,7 @@ export interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
-export const Div: FC<DivProps> = ({ background, className, ...rest }) => {
+export const Div = forwardRef<HTMLDivElement, DivProps>(({ background, className, ...rest }, ref) => {
   let bgCls = background ? `bg-${background}` : '';
   let borderCls = '';
   let roundedCls = '';
@@ -60,8 +60,8 @@ export const Div: FC<DivProps> = ({ background, className, ...rest }) => {
     validRestParams[key] = (rest as any)[key];
   }
   const cls = classNames(bgCls, borderCls, roundedCls, widthCls, heightCls, paddingCls, marginCls, className);
-  return <div {...validRestParams} className={twMerge(cls)} />;
-};
+  return <div {...validRestParams} className={twMerge(cls)} ref={ref} />;
+});
 
 const formatAttributeKeyCls = (key: string) => {
   const [prefix, value] = key.split('-');

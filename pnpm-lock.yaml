@@ -47,6 +47,9 @@ dependencies:
   react-dom:
     specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
+  swiper:
+    specifier: ^11.1.8
+    version: 11.1.8
   tailwind-merge:
     specifier: ^2.4.0
     version: 2.4.0
@@ -4841,6 +4844,11 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.1
       stable: 0.1.8
+    dev: false
+
+  /swiper@11.1.8:
+    resolution: {integrity: sha512-sBFp7fA+IfZ/7BMcg8/JSEqDD1qZXBUyliT76yk3zIYVu2fMwFVAghhAJ9vBM5tJUtHW5qcD0pmeEGQs1EK14w==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /tailwind-merge@2.4.0:
