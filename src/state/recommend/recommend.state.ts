@@ -4,7 +4,8 @@ import { loadable } from 'jotai/utils';
 
 const recommendState = loadable(atom(async () => await http.open('get/getRecommend')));
 
-export const recommendFeaturedState = atom((get) => {
+export const recommendFocusState = atom((get) => {
   const state = get(recommendState) as any;
-  return state?.data?.new_album?.data?.albums ?? [];
+  console.log('state', state);
+  return state?.data?.focus?.data?.content ?? [];
 });
